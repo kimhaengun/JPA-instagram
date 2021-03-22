@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ImageController {
 	
-	@GetMapping("/image/feed")
+	@GetMapping({"/","/image/feed"})
 		public String feed() {
 			return "image/feed";
 		}

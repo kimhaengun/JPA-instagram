@@ -15,7 +15,7 @@
 		<div class="profile-right">
 			<div class="name-group">
 				<h2>There Programing</h2>
-				<button class="cta blue" onclick="location.href='imageUpload.html'">사진등록</button>
+				<button class="cta blue" onclick="location.href='/image/upload'">사진등록</button>
 				<button class="cta">구독하기</button>
 				<button class="modi" onclick="popup('.modal-info')">
 					<i class="fas fa-cog"></i>
@@ -115,8 +115,8 @@
 
 <div class="modal-info">
 	<div class="modal">
-		<button onclick="location.href='profileSetting.html'">회원정보 변경</button>
-		<button>로그아웃</button>
+		<button onclick="location.href='/user/1/profileSetting'">회원정보 변경</button>
+		<button onclick="location.href='/logout'">로그아웃</button>
 		<button onclick="closePopup('.modal-info')">취소</button>
 	</div>
 </div>

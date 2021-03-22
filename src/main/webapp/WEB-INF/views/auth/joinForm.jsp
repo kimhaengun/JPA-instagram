@@ -33,7 +33,7 @@
                     </div>
                     <div class="login__register">
                         <span>계정이 있으신가요?</span>
-                        <a href="./index.html">로그인</a>
+                        <a href="/auth/loginForm">로그인</a>
                     </div>
               
                 </article>

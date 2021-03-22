@@ -39,7 +39,7 @@
                     </div>
                     <div class="login__register">
                         <span>계정이 없으신가요?</span>
-                        <a href="./join.html">가입하기</a>
+                        <a href="/auth/joinForm">가입하기</a>
                     </div>
                 </article>
             </section>
