@@ -11,4 +11,14 @@ public class ImageController {
 			return "image/feed";
 		}
 	
+	@GetMapping("/image/explore")
+	public String explore() {
+		return "image/explore";
+	}
+	
+	@GetMapping("/image/upload")
+	public String upload() {
+		return "image/upload";
+	}
+	
 }
