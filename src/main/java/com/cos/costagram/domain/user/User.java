@@ -12,8 +12,10 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Builder;
 import lombok.Data;
 
+@Builder
 @Data
 @Entity
 public class User {
