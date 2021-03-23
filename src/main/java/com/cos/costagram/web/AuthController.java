@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cos.costagram.service.AuthService;
 import com.cos.costagram.utils.Script;
@@ -29,7 +30,7 @@ public class AuthController {
 	}
 	
 	@PostMapping("/auth/join")
-	public String join(UserJoinReqDto userJoinReqDto) {
+	public @ResponseBody String join(UserJoinReqDto userJoinReqDto) {
 		authService.회원가입(userJoinReqDto.toEntity());
 		return Script.href("성공", "/auth/loginForm"); 
 		//그전에 해당 주소로 이동 Form이 있을경우 다시 Form리턴 하면안됨.
