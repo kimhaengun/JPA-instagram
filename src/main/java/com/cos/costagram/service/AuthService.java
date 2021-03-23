@@ -25,6 +25,7 @@ public class AuthService {
 		String bCrypt = bCryptPasswordEncoder.encode(first);
 		user.setPassword(bCrypt);
 		//
+		user.setRole("USER");
 		userRepository.save(user);	
 	} //사용자에게 UX를 보여줘야하면 util 사용을 권장
 	
