@@ -31,7 +31,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		.and()
 		.formLogin()
 		.loginPage("/auth/loginForm") //로그인 페이지로 보내고
-		.loginProcessingUrl("/"); //로그인 완료되면 feed페이지로 보냄.
+		.loginProcessingUrl("/login") // post/login 주소를 디스패처 확인하면 필터가 낚아챔
+		.defaultSuccessUrl("/"); 
 		//Oauth2.0과 CORS는 나중에 
 	}
 }
