@@ -1,15 +1,18 @@
 package com.cos.costagram.domain.user;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.cos.costagram.domain.image.Image;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
@@ -44,6 +47,9 @@ public class User {
 	private String provider; // 제공자 Google, Facebook, Naver
 	
 	private String role; //USER,ADMIN
+	
+	@OneToMany(mappedBy = "user")
+	private List<Image> images;
 	
 	@CreationTimestamp  //시간이 자동으로 들어감.
 	private Timestamp createDate;

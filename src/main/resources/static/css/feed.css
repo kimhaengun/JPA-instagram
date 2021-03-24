@@ -94,7 +94,7 @@
   .sl__item__contents__icon {
   height: 40px;
   padding: 5px 8px;  
-
+      
 }
 
 /*좋아요 실제 버튼*/
@@ -111,6 +111,13 @@
   margin-right: 10px;
   border: 0;
   cursor: pointer;
+}
+
+/*태그영역*/
+.sl__item__contents__tags{
+  height: 40px;
+  padding: 5px 10px;  
+  color: #0080ff;
 }
 
 /*게시물 내용*/
