@@ -27,15 +27,13 @@ public class UserService {
 		
 		int followState = followRepository.mFollowState(principalId, userId);
 		int followCount = followRepository.mFollowCount(userId);
-		
-		
-		userProfileRespDto.setFollowState(followState==1);
-		userProfileRespDto.setFollowCount(followCount);
+		System.out.println(followState == 1);
+
+		userProfileRespDto.setFollowState(followState == 1);
+		userProfileRespDto.setFollowCount(followCount); // 내가 팔로우 하고 있는 카운트
 		userProfileRespDto.setImageCount(userEntity.getImages().size());
 		userProfileRespDto.setUser(userEntity);
 		
-		
-		userProfileRespDto.setUser(userEntity);
 		return userProfileRespDto;
 	}
 }

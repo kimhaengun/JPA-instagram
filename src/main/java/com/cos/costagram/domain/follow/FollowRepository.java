@@ -21,9 +21,9 @@ public interface FollowRepository extends JpaRepository<Follow, Integer>{
 	//  : = 변수명 바인딩
 	int mUnFollow(int fromUserId, int toUserId);
 	
-	@Query(value = "select count(*) from follow where fromUserId =:principalId And toUserId =:userId;", nativeQuery = true)
+	@Query(value = "select count(*) from follow where fromUserId = :principalId AND toUserId = :userId", nativeQuery = true)
 	int mFollowState(int principalId, int userId);
-	
-	@Query(value = "select count(*) from follow where fromUserId =:userId;", nativeQuery = true)
+
+	@Query(value = "select count(*) from follow where fromUserId = :userId", nativeQuery = true)
 	int mFollowCount(int userId);
 }
