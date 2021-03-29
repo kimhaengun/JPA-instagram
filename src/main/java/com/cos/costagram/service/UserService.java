@@ -25,9 +25,14 @@ public class UserService {
 			return new IllegalAccessException();
 		});
 		
-		userProfileRespDto.setFollowState(true);
-		userProfileRespDto.setFollowCount(100);
-		userProfileRespDto.setImageCount(10);
+		int followState = followRepository.mFollowState(principalId, userId);
+		int followCount = followRepository.mFollowCount(userId);
+		
+		
+		userProfileRespDto.setFollowState(followState==1);
+		userProfileRespDto.setFollowCount(followCount);
+		userProfileRespDto.setImageCount(userEntity.getImages().size());
+		userProfileRespDto.setUser(userEntity);
 		
 		
 		userProfileRespDto.setUser(userEntity);
