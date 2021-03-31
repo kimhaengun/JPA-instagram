@@ -24,7 +24,7 @@
 
 					<!--게시물이미지 영역-->
 					<div class="sl__item__img">
-						<img src="/images/home3.jpg" alt="" />
+						<img src="/upload/${image.postImageUrl}" alt="" />
 					</div>
 
 					<!--게시물 내용 + 댓글 영역-->

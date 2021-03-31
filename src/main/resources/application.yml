@@ -35,6 +35,15 @@ spring:
     user:
       name: test
       password: 1234   
-
+    
+    oauth2:
+      client:
+          facebook:
+            client-id: 568296207483492
+            client-secret: a7a0866ffcaba0866c8f9c9a5facc4d2
+            scope:
+            - email
+            - public_profile
+          
 file:
   path: D:\JPA-instagram\src\main\resources\upload\
