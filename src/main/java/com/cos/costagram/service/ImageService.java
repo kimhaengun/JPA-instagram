@@ -27,8 +27,15 @@ public class ImageService {
    private final ImageRepository imageRepository;
    private final TagRepository tagRepository;
    
+   @Transactional(readOnly = true)
+   public List<Image> 인기사진(int principalId){
+	   return imageRepository.mExplore(principalId);
+   }
+   
    @Value("${file.path}") // 팩토리 어노테이션 , 이제 부터 yml 파일에 접근 할 수 있음.
    private String uploadFolder;
+   
+
    
    public List<Image> 피드이미지(int principalId){
       
