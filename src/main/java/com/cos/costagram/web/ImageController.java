@@ -50,13 +50,15 @@ public class ImageController {
 	   }
 	
 	@PostMapping("/image/{imageId}/likes")
-	public @ResponseBody CMRespDto<?> like(@AuthenticationPrincipal PrincipalDetails principalDetails, @PathVariable int imageId){
+	public @ResponseBody CMRespDto<?> like(@AuthenticationPrincipal PrincipalDetails principalDetails, 
+			@PathVariable int imageId){
 		likesService.좋아요(imageId, principalDetails.getUser().getId());
 		return new CMRespDto<>(1, null);
 	}
 	
 	@DeleteMapping("/image/{imageId}/likes")
-	public @ResponseBody CMRespDto<?> unLike(@AuthenticationPrincipal PrincipalDetails principalDetails, @PathVariable int imageId){
+	public @ResponseBody CMRespDto<?> unLike(@AuthenticationPrincipal PrincipalDetails principalDetails, 
+			@PathVariable int imageId){
 		likesService.싫어요(imageId, principalDetails.getUser().getId());
 		return new CMRespDto<>(1, null);
 	}
