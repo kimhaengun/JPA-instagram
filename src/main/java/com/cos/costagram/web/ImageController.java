@@ -30,7 +30,7 @@ public class ImageController {
 	private final LikesService likesService;
 
 	   @GetMapping({"/","/image/feed"})
-	   public String feed() { 
+	   public String feed() {
 	      return "image/feed";
 	   }
 	   

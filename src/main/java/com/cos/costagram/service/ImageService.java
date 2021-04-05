@@ -45,7 +45,7 @@ public class ImageService {
       //SELECT toUserId FROM follow where toUser=principalId
       //그리고 애들이 가지고있는 이미지를 뿌려야함
 		Page<Image> images = imageRepository.mFeed(principalId,pageable);
-
+		
 		// 좋아요 하트 색깔 로직 + 좋아요 카운트 로직
 		images.forEach((image)-> {
 
