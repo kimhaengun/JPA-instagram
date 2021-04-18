@@ -18,9 +18,9 @@ function feedLoad(){
 feedLoad();
 
 $(window).scroll(()=>{
-/*   console.log("scrollTop",$(window).scrollTop());
+   //console.log("scrollTop",$(window).scrollTop());
    console.log("document height",$(document).height());
-	console.log("window height",$(window).height());*/
+	//console.log("window height",$(window).height());
 	
 	let checkNum = $(window).scrollTop() - ($(document).height()-$(window).height());
 	console.log("checkNum",checkNum);

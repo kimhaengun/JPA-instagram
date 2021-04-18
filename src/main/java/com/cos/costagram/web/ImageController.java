@@ -36,7 +36,8 @@ public class ImageController {
 	   
 		//  주소 : /image?page=0
 		@GetMapping("/image")
-		public @ResponseBody CMRespDto<?> image(Model model, @AuthenticationPrincipal PrincipalDetails principalDetails, 
+		public @ResponseBody CMRespDto<?> image(Model model,
+				@AuthenticationPrincipal PrincipalDetails principalDetails, 
 				@PageableDefault(size=3, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
 
 			Page<Image> pages = imageService.피드이미지(principalDetails.getUser().getId(), pageable);
